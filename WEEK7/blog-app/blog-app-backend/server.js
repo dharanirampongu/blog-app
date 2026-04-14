@@ -12,7 +12,7 @@ config();
 const app = exp();
 
 app.use(cors({
-  origin: ["http://localhost:5173", "https://blog-app-lqsk.vercel.app/"],
+  origin: ["http://localhost:5173", "https://blog-app-lqsk.vercel.app"],
   credentials: true
 }));
 app.use(cookieParser());
