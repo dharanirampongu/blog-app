@@ -26,6 +26,10 @@ app.use("/author-api",authorApp)
 app.use("/admin-api",adminApp)
 app.use("/auth",commonApp)
 
+app.get("/", (req, res) => {
+  res.json({ message: "Backend is running successfully!" });
+});
+
 //connect to db
 const connectDB=async()=>{
     try{
