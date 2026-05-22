@@ -83,7 +83,7 @@ function Register() {
                   {...register("role", {
                     required: "Please select a role",
                   })}
-                  className="accent-blue-600 w-4 h-4"
+                  className="accent-[#7c3aed] w-4 h-4"
                 />
                 <span className="text-sm">User</span>
               </label>
@@ -95,7 +95,7 @@ function Register() {
                   {...register("role", {
                     required: "Please select a role",
                   })}
-                  className="accent-blue-600 w-4 h-4"
+                  className="accent-[#7c3aed] w-4 h-4"
                 />
                 <span className="text-sm">Author</span>
               </label>
@@ -221,7 +221,7 @@ function Register() {
         {/* FOOTER */}
         <p className={`${mutedText} text-center mt-5`}>
           Already have an account?{" "}
-          <NavLink to="/login" className="text-[#0066cc] font-medium">
+          <NavLink to="/login" className="text-[#7c3aed] font-medium">
             Sign in
           </NavLink>
         </p>

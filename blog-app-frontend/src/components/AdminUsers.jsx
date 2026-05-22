@@ -50,7 +50,7 @@ function AdminUsers() {
     <div className="bg-white border rounded-3xl overflow-hidden shadow-sm">
       <table className="w-full text-left border-collapse">
         <thead>
-          <tr className="bg-[#f5f5f7] border-b">
+          <tr className="bg-[#f5f3ff] border-b">
             <th className="p-4 text-xs font-semibold text-[#6e6e73] uppercase tracking-wider">
               Name
             </th>
@@ -65,9 +65,9 @@ function AdminUsers() {
             </th>
           </tr>
         </thead>
-        <tbody className="divide-y divide-[#e8e8ed]">
+        <tbody className="divide-y divide-[#ddd6fe]">
           {users.map((user) => (
-            <tr key={user.email} className="hover:bg-[#fbfbfd] transition">
+            <tr key={user.email} className="hover:bg-[#f5f3ff] transition">
               <td className="p-4">
                 <p className="text-sm font-medium text-[#1d1d1f]">
                   {user.firstName} {user.lastName}
@@ -78,9 +78,9 @@ function AdminUsers() {
                 <span
                   className={`text-[10px] font-bold px-2 py-1 rounded-full ${
                     user.isUserActive
-                      ? "bg-[#34c759]/10 text-[#34c759]"
-                      : "bg-[#ff3b30]/10 text-[#ff3b30]"
-                  }`}
+                      ? "bg-[#f43f5e]/10 text-[#9f1239]"
+                      : "bg-[#475569]/10 text-[#475569]"
+                  } shadow-sm border border-rose-100/50`}
                 >
                   {user.isUserActive ? "ACTIVE" : "BLOCKED"}
                 </span>
@@ -90,8 +90,8 @@ function AdminUsers() {
                   onClick={() => toggleUserStatus(user.email)}
                   className={`text-xs font-medium px-4 py-1.5 rounded-full border transition ${
                     user.isUserActive
-                      ? "border-[#ff3b30] text-[#ff3b30] hover:bg-[#ff3b30] hover:text-white"
-                      : "border-[#34c759] text-[#34c759] hover:bg-[#34c759] hover:text-white"
+                      ? "border-[#ef4444] text-[#ef4444] hover:bg-[#ef4444] hover:text-white"
+                      : "border-[#f43f5e] text-[#f43f5e] hover:bg-[#f43f5e] hover:text-white"
                   }`}
                 >
                   {user.isUserActive ? "Block" : "Unblock"}

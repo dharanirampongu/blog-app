@@ -74,7 +74,7 @@ function UserProfile() {
       {error && <p className={errorClass}>{error}</p>}
 
       {/* PROFILE HEADER */}
-      <div className="bg-white border border-[#e8e8ed] rounded-3xl p-6 mb-8 shadow-sm flex items-center justify-between">
+      <div className="bg-white border border-[#ddd6fe] rounded-3xl p-6 mb-8 shadow-sm flex items-center justify-between">
         {/* LEFT */}
         <div className="flex items-center gap-4">
           {/* Avatar */}
@@ -85,7 +85,7 @@ function UserProfile() {
               alt="profile"
             />
           ) : (
-            <div className="w-16 h-16 rounded-full bg-[#0066cc]/10 text-[#0066cc] flex items-center justify-center text-xl font-semibold">
+            <div className="w-16 h-16 rounded-full bg-[#f5f3ff]/10 text-[#7c3aed] flex items-center justify-center text-xl font-semibold">
               {currentUser?.firstName?.charAt(0).toUpperCase()}
             </div>
           )}
@@ -99,7 +99,7 @@ function UserProfile() {
 
         {/* LOGOUT */}
         <button
-          className="bg-[#ff3b30] text-white text-sm px-5 py-2 rounded-full hover:bg-[#d62c23] transition"
+          className="bg-[#ef4444] text-white text-sm px-5 py-2 rounded-full hover:bg-[#dc2626] transition"
           onClick={onLogout}
         >
           Logout

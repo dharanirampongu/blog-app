@@ -15,7 +15,7 @@ function AdminProfile() {
   return (
     <div className={pageWrapper}>
       {/* PROFILE HEADER */}
-      <div className="bg-white border border-[#e8e8ed] rounded-3xl p-6 mb-8 shadow-sm flex items-center justify-between">
+      <div className="bg-white border border-[#ddd6fe] rounded-3xl p-6 mb-8 shadow-sm flex items-center justify-between">
         {/* LEFT */}
         <div className="flex items-center gap-4">
           {/* Avatar */}
@@ -26,7 +26,7 @@ function AdminProfile() {
               alt="profile"
             />
           ) : (
-            <div className="w-16 h-16 rounded-full bg-[#0066cc]/10 text-[#0066cc] flex items-center justify-center text-xl font-semibold">
+            <div className="w-16 h-16 rounded-full bg-[#7c3aed]/10 text-[#7c3aed] flex items-center justify-center text-xl font-semibold">
               {currentUser?.firstName?.charAt(0).toUpperCase()}
             </div>
           )}
@@ -40,7 +40,7 @@ function AdminProfile() {
 
         {/* LOGOUT */}
         <button
-          className="bg-[#ff3b30] text-white text-sm px-5 py-2 rounded-full hover:bg-[#d62c23] transition"
+          className="bg-[#ef4444] text-white text-sm px-5 py-2 rounded-full hover:bg-[#dc2626] transition"
           onClick={onLogout}
         >
           Logout
@@ -48,12 +48,12 @@ function AdminProfile() {
       </div>
 
       {/* NAVIGATION (TABS STYLE) */}
-      <div className="flex gap-3 mb-6 bg-[#f5f5f7] p-2 rounded-full w-fit">
+      <div className="flex gap-3 mb-6 bg-[#f5f3ff] p-2 rounded-full w-fit">
         <NavLink
           to="users"
           className={({ isActive }) =>
             isActive
-              ? "bg-white px-5 py-2 rounded-full text-[#0066cc] text-sm font-medium shadow-sm"
+              ? "bg-white px-5 py-2 rounded-full text-[#7c3aed] text-sm font-medium shadow-sm"
               : `${navLinkClass} px-5 py-2`
           }
         >
@@ -64,7 +64,7 @@ function AdminProfile() {
           to="authors"
           className={({ isActive }) =>
             isActive
-              ? "bg-white px-5 py-2 rounded-full text-[#0066cc] text-sm font-medium shadow-sm"
+              ? "bg-white px-5 py-2 rounded-full text-[#7c3aed] text-sm font-medium shadow-sm"
               : `${navLinkClass} px-5 py-2`
           }
         >

@@ -12,11 +12,19 @@ res.status(200).json({message:"users and authors",payload:usersAndAuthors})
 })
 
 //block or active user or author
-adminApp.patch("/block/:email",verifyToken("ADMIN"),async(req,res)=>{
-    const email=req.params.email
-    const user = await UserModel.findOne({email})
-    if(!user){
-        return res.status(404).json({message:"user not found"})
-    }
-    
-})
+adminApp.patch("/block/:email", verifyToken("ADMIN"), async (req, res) => {
+  const email = req.params.email;
+  const user = await UserModel.findOne({ email });
+  if (!user) {
+    return res.status(404).json({ message: "user not found" });
+  }
+
+  // Toggle status
+  user.isUserActive = !user.isUserActive;
+  await user.save();
+
+  res.status(200).json({
+    message: `User ${user.isUserActive ? "activated" : "blocked"} successfully`,
+    payload: user,
+  });
+});
